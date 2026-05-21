@@ -6,8 +6,10 @@ public class HalloumiBoxes_1903A {
         
         while(left <= right){
             int temp = arr[left];
-            arr[left] = temp;
-            arr[right] = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
         }
     }
     public static void main(String[] args) {
@@ -24,8 +26,12 @@ public class HalloumiBoxes_1903A {
 
             for(int a = 0; a < n; a++) arr[a] = sc.nextInt();
 
-            while();
-
+            while(k > 0){
+                reverse(arr, 0, n-1);
+                reverse(arr, 0, k-1);
+                reverse(arr, k, n-1);
+                k--;
+            }
 
         }
         
