@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class HalloumiBoxes_1903A {
     
-    public void reverse(int[] arr, int left, int right){
+    public static void reverse(int[] arr, int left, int right){
         
         while(left <= right){
             int temp = arr[left];
@@ -31,6 +31,7 @@ public class HalloumiBoxes_1903A {
                 reverse(arr, 0, k-1);
                 reverse(arr, k, n-1);
                 k--;
+                dsvvs
             }
 
         }
