@@ -1,5 +1,7 @@
 // package Contest_21_03_26(2231);
 
+import java.util.Scanner;
+
 public class MaximumPrefixSums {
     
     public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class MaximumPrefixSums {
         
         while(t-- > 0){
             int n = sc.nextInt();
-            String s = sc.next();
+            // String s = sc.next();
 
             int a[] = new int[n];
             int c[] = new int[n];
@@ -25,7 +27,7 @@ public class MaximumPrefixSums {
                 b[i] = a[i] + b[i-1];
             }
 
-
+            sc.close();
 
         }
     }

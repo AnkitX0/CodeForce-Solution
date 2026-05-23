@@ -31,7 +31,6 @@ public class HalloumiBoxes_1903A {
                 reverse(arr, 0, k-1);
                 reverse(arr, k, n-1);
                 k--;
-                dsvvs
             }
 
         }
