@@ -1,4 +1,6 @@
 
+
+
 import java.util.Scanner;
 
 public class PoliceRecruits {
@@ -24,5 +26,6 @@ public class PoliceRecruits {
         }
 
         System.out.println(crime);
+        sc.close();
     }
 }
