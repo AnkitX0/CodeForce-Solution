@@ -4,7 +4,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Twins {
+public class ATwins {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -19,16 +19,22 @@ public class Twins {
 
         int prefixSum[] = new int[n];
 
-        prefixSum[0] = arr[n - 1];
-        for(int i = 1; i < n; i++) prefixSum[i] = prefixSum[i - 1] + arr[n - i - 1];
+        prefixSum[0] = arr[0];
+        for(int i = 1; i < n; i++) prefixSum[i] = prefixSum[i - 1] + arr[i];
 
-        int totalSum = prefixSum[n - 1];
+        int suffixSum[] = new int [n];
+        suffixSum[0] = arr[n - 1];
+
+        for(int i = 1; i < n - 1; i++) suffixSum[i] = arr[ n - i - 1] + suffixSum[i - 1];
+
+        System.out.println(Arrays.toString(prefixSum));
+        System.out.println(Arrays.toString(suffixSum));
+
         int index = 0;
 
         while (index < n){
-            if(prefixSum[index] > totalSum - prefixSum[index]) break;
+            if(prefixSum[index] > suffixSum[ index]) break;
             index++;
-            // else break;
         }
         System.out.println(index + 1);
         sc.close();
